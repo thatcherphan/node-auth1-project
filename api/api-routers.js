@@ -32,8 +32,12 @@ router.post('/register', (req, res) => {
         })
 })
 
-router.get('/login', (req, res) => {
+router.post('/login', authorize, (req, res) => {
+    let {username} = req.headers;
+    
+    //To be continue for next lesson, session and cookies
 
+    res.status(200).json({message: "Logged in"})
 })
 
 module.exports = router;
