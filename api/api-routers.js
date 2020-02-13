@@ -8,7 +8,7 @@ const Users = require('../users/users-model.js');
 const usersRouter = require('../users/users-router.js');
 
 // /api/users
-// router.use('/users', usersRouter);
+router.use('/users', usersRouter);
 
 // /api
 router.get('/', (req, res) => {
