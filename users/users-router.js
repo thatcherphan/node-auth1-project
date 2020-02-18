@@ -5,6 +5,7 @@ const Users = require('../users/users-model.js');
 const authorize = require('../auth/auth-required-middleware.js');
 
 router.get('/', authorize, (req, res) => {
+    req.session.skippy = "Checkersthecat";
     Users.find()
         .then(user => {
             res.status(200).json(user)
